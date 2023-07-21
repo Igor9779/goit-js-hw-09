@@ -8,6 +8,8 @@ const refs = {
     bodyColor: document.querySelector('body'),
 };
 
+let timerId = null;
+
 refs.stop.disabled = true;
 
 const onClickStartChangeColor = () => {
