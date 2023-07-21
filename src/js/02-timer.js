@@ -5,7 +5,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 let timerId = null;
 
-refs = {
+const refs = {
     input: document.querySelector('#datetime-picker'),
     button: document.querySelector('[data-start]'),
     days: document.querySelector('[data-days]'),
