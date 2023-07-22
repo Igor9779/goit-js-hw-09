@@ -30,6 +30,9 @@ function onClickBtnStart() {
 };
 
 function startTimer(duration) {
+    refs.button.disabled = true;
+    refs.input.disabled = true;
+
     timerId = setInterval(() => {
         const time = convertMs(duration);
         refs.days.textContent = addLeadingZero(time.days);
@@ -39,6 +42,12 @@ function startTimer(duration) {
 
         if (duration <= 0) {
             clearInterval(timerId);
+            refs.input.disabled = false;
+
+            refs.days.textContent = "00";
+            refs.hours.textContent = "00";
+            refs.minutes.textContent = "00";
+            refs.seconds.textContent = "00";
         };
 
         duration -= 1000;
